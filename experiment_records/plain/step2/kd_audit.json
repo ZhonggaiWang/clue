@@ -1,0 +1,19 @@
+{
+  "kd_pixels": 7883265258.0,
+  "kd_eligible_pixels": 7883265258.0,
+  "kd_old_evidence_pixels": 715297918.0,
+  "kd_new_evidence_pixels": 2139259340.0,
+  "kd_unresolved_pixels": 5028708000.0,
+  "kd_ambiguous_conflict_pixels": 23833557.0,
+  "kd_conflict_pixels": 130908230.0,
+  "kd_old_conflict_pixels": 3468203.0,
+  "kd_teacher_confident_pixels": 780042067.0,
+  "kd_kl_sum": 799992427.6185303,
+  "kd_plain_kl_sum": 799992427.6185303,
+  "batches_per_rank": 6000,
+  "world_size": 2,
+  "scope": "All active KD training batches, summed across ranks; repeated augmented pixels",
+  "kd_mode": "plain",
+  "temperature": 2.0,
+  "weight": 0.1
+}

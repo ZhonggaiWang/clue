@@ -1,0 +1,5 @@
+# Preserve the exact experiment-source bytes used by SHA256 manifests.
+* -text
+*.sh text eol=lf
+README.md text eol=lf
+requirements.txt text eol=lf

@@ -1,0 +1,151 @@
+{
+  "created_utc": "2026-10-14T10:59:07.529003+00:00",
+  "status": "registered_before_training",
+  "task": "10-5",
+  "seed": 0,
+  "gpus": [
+    0,
+    2,
+    3,
+    4
+  ],
+  "global_batch": 8,
+  "per_gpu_batch": 4,
+  "steps": [
+    1,
+    2
+  ],
+  "iterations_per_step": 8000,
+  "variants": [
+    "counter",
+    "relations"
+  ],
+  "common_method": "C local recovery + paired cosine fusion margin0.1",
+  "base": {
+    "task": "10-5",
+    "checkpoint": "/data/zhonggai/home/python-work-space/WILSS/clue/fuse0/assets/step0_bg0.pth",
+    "sha256": "97ce07657378a28e6fa037576fcc57868992b19721e3be5d975b1858f9c94801",
+    "future_training_labels": 0,
+    "step0_ptc": false,
+    "user_confirmed_date": "2026-10-13",
+    "scope": "All future CLUE 10-5 incremental runs use this step0 unless user explicitly changes it; other task splits require matching future-background0 step0."
+  },
+  "loss": "OriginalCLS+.2PTC+.1SEG+unchangedC/Fcorrections+.1newchannelKD",
+  "kd": {
+    "weight": 0.1,
+    "temperature": 2.0,
+    "start": 2000,
+    "teacher_threshold": 0.75,
+    "channels": "old foreground only, excluding background and new channels",
+    "distance": "sum of Bernoulli KL across old foreground channels, times T squared",
+    "normalization": "same valid nonignore pixel denominator for both variants (rank-local, same as baseline SEG)",
+    "plain": "all valid nonignore pixels",
+    "evidence": "old teacher foreground, sigmoid winning logit >=0.75 and classifier cosine>=0; no refined new candidate OR cosine conflict resolved to old by margin0.1; exclude C recovered and new-strong/ambiguous conflict pixels",
+    "detached": [
+      "teacher output",
+      "cosine evidence",
+      "KD selection mask"
+    ],
+    "extra_image_encodes": 0,
+    "channel_selection": {
+      "counter": "Ordinary old-FG KD everywhere, remove only teacher-positive old-class channels (rawsigmoid>0.5) on existing supported-new pixels; retain negative and unresolved soft knowledge.",
+      "relations": "Keep highconfidence old-class absence (rawsigmoid<=0.25) anywhere, and the teacher-winning old-class positive (>=0.75) only on existing protected-old pixels; normalize total channel-weight budget to ordinaryKD when nonempty."
+    },
+    "relations_weight_normalization": "sum channelweights equals eligiblepixels*old_count if nonempty; not equal measuredKL/gradientnorm"
+  },
+  "schedule": {
+    "seg_start": 0,
+    "C_start": 2000,
+    "fusion_start": 2000,
+    "lr": 2e-05,
+    "lr_warmup": 2000,
+    "warmup_ratio": 1e-06,
+    "weight_decay": 0.01
+  },
+  "evaluation": {
+    "iterations": [
+      2000,
+      4000,
+      6000,
+      8000
+    ],
+    "primary": "FinalStep2SSmIoU; fullfive-scaleflip andold/newtradeoffs also recorded",
+    "final_scales": [
+      0.5,
+      0.75,
+      1,
+      1.25,
+      1.5
+    ],
+    "flip": true,
+    "validation_images": [
+      1240,
+      1449
+    ]
+  },
+  "checkpoint_policy": "only final checkpoint of each stage; retain until later stages and all analysis complete; never delete canonical step0; archive metrics/hashes before deleting inferior run weights",
+  "analysis": [
+    "stage1 and stage2 old/new/initial/incremental per-class IoU",
+    "all-active-batch KD coverage, protected/new/unresolved and conflict counts",
+    "paired final predictions and old-to-new/new-to-old errors",
+    "same-image old-region retention before/after step2",
+    "paired image bootstrap 95% CI (evaluation sampling only, not seed variance)",
+    "channelcoverage, positive/negative retained/dropped quality, channel-weight budget and actualKLstrength",
+    "fixed128 heldoutcounterfactualqualitybeforetraining; GT readonlyafter masks"
+  ],
+  "limitations": [
+    "one seed",
+    "A800 no-KD result is a historical context reference; different GPU/runtime cannot prove net KD gain",
+    "evaluation labels never enter incremental training or mask selection",
+    "Channel-weight-budget normalization does not ensure equal observedKL or gradient mass.",
+    "Historicalplain/evidence eachoneseed; freshcontrols/replication may be needed to substantiate gain."
+  ],
+  "unchanged_components": {
+    "model/losses.py": "7b6fdb0fab77cdb1c296ce4e79e527d1d830d298d9ed701f259fa4c52444ee9e",
+    "model/background_recovery.py": "97784e66f2d514c6c9339a1fa740eae0b4df979de7c76c03753122914ebeb471",
+    "model/composition.py": "501109e643ce867c13c349c868142f6ce9c9d7fd3341148177409b556ed805e7",
+    "model/candidate_fusion.py": "6c774883339caee3e0075118fcb5f6f8864b444953c41c0f40eab4a212d4278b",
+    "model/model_seg_neg.py": "1320d299858203da135969e970646c5c50c664fe61e01fc26355f387eed64a72",
+    "utils/camutils.py": "44a8d8e2a8c57fa2be64632ffc437395a5a84425bc1cc206ba7b7d4da6721ec6",
+    "datasets/voc.py": "34ff0e46e1942c1d51616c9d08ef60de5a1dd6d54eb52f1433096220d2c28373",
+    "tasks.py": "2474c3e876afe57b08e2b83395c37dadbc722072594df5b6e1f42f163630f929"
+  },
+  "resource_policy": {
+    "latest_user_instruction": "Use four idle GPUs, two strategies concurrently, two GPUs per task",
+    "max_total_GPUs": 4,
+    "max_parallel_tasks": 2,
+    "GPUs_per_task": 2,
+    "candidate_physical_GPUs": [
+      0,
+      2,
+      3,
+      4
+    ],
+    "idle_rule": "memoryused<250MiB andno computeprocess; waitwithoutstoppingothers",
+    "stop_others": false
+  },
+  "method_variants": {
+    "counter": "Ordinary old-FG KD everywhere, remove only teacher-positive old-class channels (rawsigmoid>0.5) on existing supported-new pixels; retain negative and unresolved soft knowledge.",
+    "relations": "Keep highconfidence old-class absence (rawsigmoid<=0.25) anywhere, and the teacher-winning old-class positive (>=0.75) only on existing protected-old pixels; normalize total channel-weight budget to ordinaryKD when nonempty."
+  },
+  "fresh_control": "Existing kd1 ordinaryKD full chains on same runtime/world2/spg4/global8; physical GPU pairs differ. No fresh plain run in current two-task allocation.",
+  "memory_execution": {
+    "CAM_no_grad_chunk_size": null,
+    "world_size": 2,
+    "per_gpu_batch": 4,
+    "global_batch": 8,
+    "gradient_accumulation": false,
+    "additional_image_encodes": 0,
+    "CAM": "Original multi_scale_cam2 restored, identical to kd1"
+  },
+  "gpu_pairs": {
+    "counter": [
+      0,
+      2
+    ],
+    "relations": [
+      3,
+      4
+    ]
+  }
+}

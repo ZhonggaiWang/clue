@@ -1,0 +1,613 @@
+{
+  "checkpoint": "/data/zhonggai/home/python-work-space/WILSS/clue/kd1/runs/plain/10-5/step2/model_final.pth",
+  "checkpoint_sha256": "69a704c512b1c68ebc6106c2e56ba9b3dbcd74276083ea08ff3a6a49c518e24c",
+  "parameters": {
+    "iterations": 10,
+    "gaussian_sxy": 3,
+    "gaussian_compat": 3,
+    "bilateral_sxy": 80,
+    "bilateral_srgb": 13,
+    "bilateral_compat": 10
+  },
+  "evaluations": {
+    "single_scale": {
+      "scales": [
+        1.0
+      ],
+      "flip": false,
+      "raw_groups": {
+        "all": 70.77133215876269,
+        "old_with_background": 74.24651905499506,
+        "old_foreground": 73.1331987971756,
+        "new": 59.65073409081913,
+        "initial_foreground": 74.98267048828332,
+        "first_added": 69.43425541496022
+      },
+      "crf_groups": {
+        "all": 71.36718207108174,
+        "old_with_background": 74.54271844912165,
+        "old_foreground": 73.4285332008045,
+        "new": 61.20546566135401,
+        "initial_foreground": 75.36259472963467,
+        "first_added": 69.5604101431442
+      },
+      "delta_groups": {
+        "all": 0.5958499123190535,
+        "old_with_background": 0.2961993941265888,
+        "old_foreground": 0.2953344036288996,
+        "new": 1.5547315705348836,
+        "initial_foreground": 0.37992424135134684,
+        "first_added": 0.12615472818397677
+      },
+      "raw_errors": {
+        "old_to_new_percent": 1.1921295916340904,
+        "old_to_background_percent": 14.473463519194599,
+        "new_to_old_percent": 3.164785402648103,
+        "new_to_background_percent": 15.25742012412541
+      },
+      "crf_errors": {
+        "old_to_new_percent": 1.0343733705023412,
+        "old_to_background_percent": 15.695649731078998,
+        "new_to_old_percent": 2.9104279270096742,
+        "new_to_background_percent": 16.296556451578258
+      },
+      "per_class": [
+        {
+          "class_id": 0,
+          "class_name": "background",
+          "group": "old",
+          "raw_iou": 90.9463229222866,
+          "crf_iou": 91.2554971738789,
+          "delta_pp": 0.30917425159229595
+        },
+        {
+          "class_id": 1,
+          "class_name": "aeroplane",
+          "group": "old",
+          "raw_iou": 84.65253393305498,
+          "crf_iou": 86.88935192833428,
+          "delta_pp": 2.2368179952792957
+        },
+        {
+          "class_id": 2,
+          "class_name": "bicycle",
+          "group": "old",
+          "raw_iou": 40.26077891464935,
+          "crf_iou": 39.07674983356922,
+          "delta_pp": -1.1840290810801335
+        },
+        {
+          "class_id": 3,
+          "class_name": "bird",
+          "group": "old",
+          "raw_iou": 89.80575370580917,
+          "crf_iou": 89.04160480501251,
+          "delta_pp": -0.7641489007966555
+        },
+        {
+          "class_id": 4,
+          "class_name": "boat",
+          "group": "old",
+          "raw_iou": 69.72818373936379,
+          "crf_iou": 69.12924147449387,
+          "delta_pp": -0.598942264869919
+        },
+        {
+          "class_id": 5,
+          "class_name": "bottle",
+          "group": "old",
+          "raw_iou": 80.15556909460359,
+          "crf_iou": 81.63587953836344,
+          "delta_pp": 1.4803104437598478
+        },
+        {
+          "class_id": 6,
+          "class_name": "bus",
+          "group": "old",
+          "raw_iou": 89.84327225833655,
+          "crf_iou": 90.39293295934664,
+          "delta_pp": 0.5496607010100831
+        },
+        {
+          "class_id": 7,
+          "class_name": "car",
+          "group": "old",
+          "raw_iou": 84.70836050840865,
+          "crf_iou": 84.86549618794493,
+          "delta_pp": 0.1571356795362817
+        },
+        {
+          "class_id": 8,
+          "class_name": "cat",
+          "group": "old",
+          "raw_iou": 87.46598637031066,
+          "crf_iou": 88.56954474977175,
+          "delta_pp": 1.1035583794610915
+        },
+        {
+          "class_id": 9,
+          "class_name": "chair",
+          "group": "old",
+          "raw_iou": 37.911739572939865,
+          "crf_iou": 35.974285520912126,
+          "delta_pp": -1.9374540520277392
+        },
+        {
+          "class_id": 10,
+          "class_name": "cow",
+          "group": "old",
+          "raw_iou": 85.29452678535661,
+          "crf_iou": 88.05086029859793,
+          "delta_pp": 2.756333513241316
+        },
+        {
+          "class_id": 11,
+          "class_name": "diningtable",
+          "group": "old",
+          "raw_iou": 39.29891261263642,
+          "crf_iou": 40.26319305955166,
+          "delta_pp": 0.9642804469152395
+        },
+        {
+          "class_id": 12,
+          "class_name": "dog",
+          "group": "old",
+          "raw_iou": 81.07141480445915,
+          "crf_iou": 81.40467508941428,
+          "delta_pp": 0.3332602849551307
+        },
+        {
+          "class_id": 13,
+          "class_name": "horse",
+          "group": "old",
+          "raw_iou": 79.71510176270787,
+          "crf_iou": 80.06828458060349,
+          "delta_pp": 0.3531828178956147
+        },
+        {
+          "class_id": 14,
+          "class_name": "motorbike",
+          "group": "old",
+          "raw_iou": 76.12710546551212,
+          "crf_iou": 75.60811885641566,
+          "delta_pp": -0.5189866090964586
+        },
+        {
+          "class_id": 15,
+          "class_name": "person",
+          "group": "old",
+          "raw_iou": 70.95874242948555,
+          "crf_iou": 70.45777912973588,
+          "delta_pp": -0.5009632997496709
+        },
+        {
+          "class_id": 16,
+          "class_name": "pottedplant",
+          "group": "new",
+          "raw_iou": 44.79031333391075,
+          "crf_iou": 45.58979429103463,
+          "delta_pp": 0.7994809571238761
+        },
+        {
+          "class_id": 17,
+          "class_name": "sheep",
+          "group": "new",
+          "raw_iou": 84.12610951019701,
+          "crf_iou": 87.34549601025164,
+          "delta_pp": 3.2193865000546253
+        },
+        {
+          "class_id": 18,
+          "class_name": "sofa",
+          "group": "new",
+          "raw_iou": 51.59790233860465,
+          "crf_iou": 53.11909950967494,
+          "delta_pp": 1.5211971710702912
+        },
+        {
+          "class_id": 19,
+          "class_name": "train",
+          "group": "new",
+          "raw_iou": 67.83207951126403,
+          "crf_iou": 68.61860343020409,
+          "delta_pp": 0.7865239189400626
+        },
+        {
+          "class_id": 20,
+          "class_name": "tvmonitor",
+          "group": "new",
+          "raw_iou": 49.907265760119216,
+          "crf_iou": 51.35433506560478,
+          "delta_pp": 1.447069305485563
+        }
+      ],
+      "largest_improvements": [
+        {
+          "class_id": 17,
+          "class_name": "sheep",
+          "group": "new",
+          "raw_iou": 84.12610951019701,
+          "crf_iou": 87.34549601025164,
+          "delta_pp": 3.2193865000546253
+        },
+        {
+          "class_id": 10,
+          "class_name": "cow",
+          "group": "old",
+          "raw_iou": 85.29452678535661,
+          "crf_iou": 88.05086029859793,
+          "delta_pp": 2.756333513241316
+        },
+        {
+          "class_id": 1,
+          "class_name": "aeroplane",
+          "group": "old",
+          "raw_iou": 84.65253393305498,
+          "crf_iou": 86.88935192833428,
+          "delta_pp": 2.2368179952792957
+        },
+        {
+          "class_id": 18,
+          "class_name": "sofa",
+          "group": "new",
+          "raw_iou": 51.59790233860465,
+          "crf_iou": 53.11909950967494,
+          "delta_pp": 1.5211971710702912
+        },
+        {
+          "class_id": 5,
+          "class_name": "bottle",
+          "group": "old",
+          "raw_iou": 80.15556909460359,
+          "crf_iou": 81.63587953836344,
+          "delta_pp": 1.4803104437598478
+        }
+      ],
+      "largest_decreases": [
+        {
+          "class_id": 9,
+          "class_name": "chair",
+          "group": "old",
+          "raw_iou": 37.911739572939865,
+          "crf_iou": 35.974285520912126,
+          "delta_pp": -1.9374540520277392
+        },
+        {
+          "class_id": 2,
+          "class_name": "bicycle",
+          "group": "old",
+          "raw_iou": 40.26077891464935,
+          "crf_iou": 39.07674983356922,
+          "delta_pp": -1.1840290810801335
+        },
+        {
+          "class_id": 3,
+          "class_name": "bird",
+          "group": "old",
+          "raw_iou": 89.80575370580917,
+          "crf_iou": 89.04160480501251,
+          "delta_pp": -0.7641489007966555
+        },
+        {
+          "class_id": 4,
+          "class_name": "boat",
+          "group": "old",
+          "raw_iou": 69.72818373936379,
+          "crf_iou": 69.12924147449387,
+          "delta_pp": -0.598942264869919
+        },
+        {
+          "class_id": 14,
+          "class_name": "motorbike",
+          "group": "old",
+          "raw_iou": 76.12710546551212,
+          "crf_iou": 75.60811885641566,
+          "delta_pp": -0.5189866090964586
+        }
+      ],
+      "elapsed_seconds": 1070.5799850174226
+    },
+    "five_scale_flip": {
+      "scales": [
+        0.5,
+        0.75,
+        1.0,
+        1.25,
+        1.5
+      ],
+      "flip": true,
+      "raw_groups": {
+        "all": 72.38277854192035,
+        "old_with_background": 75.79771528886172,
+        "old_foreground": 74.7484657975373,
+        "new": 61.45498095170802,
+        "initial_foreground": 76.80552376257333,
+        "first_added": 70.63434986746522
+      },
+      "crf_groups": {
+        "all": 71.5142590373015,
+        "old_with_background": 74.72133377344676,
+        "old_foreground": 73.6189439764589,
+        "new": 61.25161988163669,
+        "initial_foreground": 75.9690015306123,
+        "first_added": 68.91882886815206
+      },
+      "delta_groups": {
+        "all": -0.8685195046188454,
+        "old_with_background": -1.0763815154149654,
+        "old_foreground": -1.1295218210784128,
+        "new": -0.20336107007133108,
+        "initial_foreground": -0.8365222319610268,
+        "first_added": -1.7155209993131564
+      },
+      "raw_errors": {
+        "old_to_new_percent": 1.2284499730563936,
+        "old_to_background_percent": 14.532090059754395,
+        "new_to_old_percent": 2.9938088056270704,
+        "new_to_background_percent": 15.44212737229623
+      },
+      "crf_errors": {
+        "old_to_new_percent": 1.132714420902639,
+        "old_to_background_percent": 16.753965007988747,
+        "new_to_old_percent": 2.670206375577403,
+        "new_to_background_percent": 17.445651464685195
+      },
+      "per_class": [
+        {
+          "class_id": 0,
+          "class_name": "background",
+          "group": "old",
+          "raw_iou": 91.53645765872811,
+          "crf_iou": 91.25718072826454,
+          "delta_pp": -0.27927693046356694
+        },
+        {
+          "class_id": 1,
+          "class_name": "aeroplane",
+          "group": "old",
+          "raw_iou": 87.3502133028901,
+          "crf_iou": 88.3914610287625,
+          "delta_pp": 1.0412477258724095
+        },
+        {
+          "class_id": 2,
+          "class_name": "bicycle",
+          "group": "old",
+          "raw_iou": 42.37421771336628,
+          "crf_iou": 40.598523740631244,
+          "delta_pp": -1.7756939727350343
+        },
+        {
+          "class_id": 3,
+          "class_name": "bird",
+          "group": "old",
+          "raw_iou": 90.49666108495981,
+          "crf_iou": 88.7260101010101,
+          "delta_pp": -1.7706509839497073
+        },
+        {
+          "class_id": 4,
+          "class_name": "boat",
+          "group": "old",
+          "raw_iou": 72.69446378192211,
+          "crf_iou": 70.971343163008,
+          "delta_pp": -1.723120618914109
+        },
+        {
+          "class_id": 5,
+          "class_name": "bottle",
+          "group": "old",
+          "raw_iou": 81.4967954339732,
+          "crf_iou": 81.49984139765269,
+          "delta_pp": 0.003045963679483066
+        },
+        {
+          "class_id": 6,
+          "class_name": "bus",
+          "group": "old",
+          "raw_iou": 91.62883033171946,
+          "crf_iou": 90.84642388202107,
+          "delta_pp": -0.7824064496983851
+        },
+        {
+          "class_id": 7,
+          "class_name": "car",
+          "group": "old",
+          "raw_iou": 86.05348836256603,
+          "crf_iou": 84.68558410203201,
+          "delta_pp": -1.3679042605340186
+        },
+        {
+          "class_id": 8,
+          "class_name": "cat",
+          "group": "old",
+          "raw_iou": 88.93565243828853,
+          "crf_iou": 89.68672917035775,
+          "delta_pp": 0.7510767320692224
+        },
+        {
+          "class_id": 9,
+          "class_name": "chair",
+          "group": "old",
+          "raw_iou": 38.86009778381964,
+          "crf_iou": 34.93951469437131,
+          "delta_pp": -3.9205830894483285
+        },
+        {
+          "class_id": 10,
+          "class_name": "cow",
+          "group": "old",
+          "raw_iou": 88.16481739222813,
+          "crf_iou": 89.34458402627654,
+          "delta_pp": 1.1797666340484056
+        },
+        {
+          "class_id": 11,
+          "class_name": "diningtable",
+          "group": "old",
+          "raw_iou": 39.907337338111795,
+          "crf_iou": 38.16672497801505,
+          "delta_pp": -1.7406123600967476
+        },
+        {
+          "class_id": 12,
+          "class_name": "dog",
+          "group": "old",
+          "raw_iou": 82.30315150068712,
+          "crf_iou": 81.1318382352089,
+          "delta_pp": -1.1713132654782186
+        },
+        {
+          "class_id": 13,
+          "class_name": "horse",
+          "group": "old",
+          "raw_iou": 81.81505751308589,
+          "crf_iou": 79.620557082815,
+          "delta_pp": -2.1945004302708924
+        },
+        {
+          "class_id": 14,
+          "class_name": "motorbike",
+          "group": "old",
+          "raw_iou": 78.04250927376599,
+          "crf_iou": 76.50749237873801,
+          "delta_pp": -1.5350168950279794
+        },
+        {
+          "class_id": 15,
+          "class_name": "person",
+          "group": "old",
+          "raw_iou": 71.10369371167532,
+          "crf_iou": 69.16753166598335,
+          "delta_pp": -1.9361620456919724
+        },
+        {
+          "class_id": 16,
+          "class_name": "pottedplant",
+          "group": "new",
+          "raw_iou": 49.20085250004135,
+          "crf_iou": 47.20380361949821,
+          "delta_pp": -1.9970488805431401
+        },
+        {
+          "class_id": 17,
+          "class_name": "sheep",
+          "group": "new",
+          "raw_iou": 83.5548873440465,
+          "crf_iou": 83.81278797013593,
+          "delta_pp": 0.2579006260894232
+        },
+        {
+          "class_id": 18,
+          "class_name": "sofa",
+          "group": "new",
+          "raw_iou": 51.706713112269085,
+          "crf_iou": 51.979179333499594,
+          "delta_pp": 0.2724662212305091
+        },
+        {
+          "class_id": 19,
+          "class_name": "train",
+          "group": "new",
+          "raw_iou": 70.11160325815906,
+          "crf_iou": 70.07737407861246,
+          "delta_pp": -0.03422917954659965
+        },
+        {
+          "class_id": 20,
+          "class_name": "tvmonitor",
+          "group": "new",
+          "raw_iou": 52.70084854402409,
+          "crf_iou": 53.18495440643727,
+          "delta_pp": 0.48410586241318043
+        }
+      ],
+      "largest_improvements": [
+        {
+          "class_id": 10,
+          "class_name": "cow",
+          "group": "old",
+          "raw_iou": 88.16481739222813,
+          "crf_iou": 89.34458402627654,
+          "delta_pp": 1.1797666340484056
+        },
+        {
+          "class_id": 1,
+          "class_name": "aeroplane",
+          "group": "old",
+          "raw_iou": 87.3502133028901,
+          "crf_iou": 88.3914610287625,
+          "delta_pp": 1.0412477258724095
+        },
+        {
+          "class_id": 8,
+          "class_name": "cat",
+          "group": "old",
+          "raw_iou": 88.93565243828853,
+          "crf_iou": 89.68672917035775,
+          "delta_pp": 0.7510767320692224
+        },
+        {
+          "class_id": 20,
+          "class_name": "tvmonitor",
+          "group": "new",
+          "raw_iou": 52.70084854402409,
+          "crf_iou": 53.18495440643727,
+          "delta_pp": 0.48410586241318043
+        },
+        {
+          "class_id": 18,
+          "class_name": "sofa",
+          "group": "new",
+          "raw_iou": 51.706713112269085,
+          "crf_iou": 51.979179333499594,
+          "delta_pp": 0.2724662212305091
+        }
+      ],
+      "largest_decreases": [
+        {
+          "class_id": 9,
+          "class_name": "chair",
+          "group": "old",
+          "raw_iou": 38.86009778381964,
+          "crf_iou": 34.93951469437131,
+          "delta_pp": -3.9205830894483285
+        },
+        {
+          "class_id": 13,
+          "class_name": "horse",
+          "group": "old",
+          "raw_iou": 81.81505751308589,
+          "crf_iou": 79.620557082815,
+          "delta_pp": -2.1945004302708924
+        },
+        {
+          "class_id": 16,
+          "class_name": "pottedplant",
+          "group": "new",
+          "raw_iou": 49.20085250004135,
+          "crf_iou": 47.20380361949821,
+          "delta_pp": -1.9970488805431401
+        },
+        {
+          "class_id": 15,
+          "class_name": "person",
+          "group": "old",
+          "raw_iou": 71.10369371167532,
+          "crf_iou": 69.16753166598335,
+          "delta_pp": -1.9361620456919724
+        },
+        {
+          "class_id": 2,
+          "class_name": "bicycle",
+          "group": "old",
+          "raw_iou": 42.37421771336628,
+          "crf_iou": 40.598523740631244,
+          "delta_pp": -1.7756939727350343
+        }
+      ],
+      "elapsed_seconds": 1297.0190565329976
+    }
+  },
+  "scope": "1449 held-out images; same averaged logits before/after DenseCRF; fixed parameters"
+}

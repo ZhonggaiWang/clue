@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "checks": {
+    "all7_jobs_exit0": true,
+    "frozen_sources_unchanged": true,
+    "canonical_step0_sha": true,
+    "step1_8000_fullval": true,
+    "step1_SEG_first_batch": true,
+    "step1_batch8_KD6000": true,
+    "step1_lineage": true,
+    "step1_checkpoint_sha": true,
+    "step2_8000_fullval": true,
+    "step2_SEG_first_batch": true,
+    "step2_batch8_KD6000": true,
+    "step2_lineage": true,
+    "step2_checkpoint_sha": true
+  },
+  "limitation": "Single seed, different physical GPU pairs. First-batch loss confirms SEG enabled; separate decoder-gradient trace was not recorded."
+}

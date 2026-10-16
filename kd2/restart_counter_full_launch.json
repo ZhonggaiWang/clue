@@ -1,0 +1,30 @@
+{
+  "pid": 2017544,
+  "gpus": [
+    4,
+    5
+  ],
+  "world_size": 2,
+  "per_gpu_batch": 4,
+  "global_batch": 8,
+  "steps": [
+    1,
+    2
+  ],
+  "iterations_per_step": 8000,
+  "seg_start": 0,
+  "C_F_KD_start": 2000,
+  "mode": "counter",
+  "base": {
+    "task": "10-5",
+    "checkpoint": "/data/zhonggai/home/python-work-space/WILSS/clue/fuse0/assets/step0_bg0.pth",
+    "sha256": "97ce07657378a28e6fa037576fcc57868992b19721e3be5d975b1858f9c94801",
+    "future_training_labels": 0,
+    "step0_ptc": false,
+    "user_confirmed_date": "2026-10-13",
+    "scope": "All future CLUE 10-5 incremental runs use this step0 unless user explicitly changes it; other task splits require matching future-background0 step0."
+  },
+  "started_utc": "2026-10-15T08:27:24.220099+00:00",
+  "source_sha256": "a12c2678c3b0ffa1364e077ca71e7a5d55ea193dbeac6327c4b068c9d254988f",
+  "parent_frozen_manifest_sha256": "521e4d397d3ebc0ce221e20ad8b5ae38bbb7381a8fc26907c42bfa731b8e8db8"
+}

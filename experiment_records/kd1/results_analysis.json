@@ -1,0 +1,566 @@
+{
+  "task": "10-5",
+  "seed": 0,
+  "variants": {
+    "plain": {
+      "stages": {
+        "1": {
+          "single_scale": {
+            "miou": 75.08644704357246,
+            "iou": [
+              92.7029719163983,
+              86.85472134643298,
+              40.5582986621435,
+              90.33967542774631,
+              70.66979666886837,
+              81.00159498217359,
+              90.84440452616565,
+              83.70932647562087,
+              88.61103828530538,
+              44.777913151352635,
+              87.33928663223983,
+              38.57285806671899,
+              81.29739761222974,
+              80.33751088719193,
+              74.06211579704596,
+              69.70424225952532
+            ],
+            "images": 1240,
+            "class_ids": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "iteration": 8000
+          },
+          "five_scale_flip": {
+            "miou": 76.2981477867844,
+            "iou": [
+              92.94125621708443,
+              89.07312972739739,
+              42.719133099187864,
+              91.1480400772169,
+              73.46513366077149,
+              82.45818690710779,
+              92.42361106764325,
+              85.13759915786308,
+              89.96650658749596,
+              45.460245755267906,
+              89.57679659176472,
+              37.79862900449179,
+              81.95245863025106,
+              82.24595658391345,
+              75.73838103479353,
+              68.66530048629969
+            ],
+            "old_including_background_miou": 79.48814898625461,
+            "new_miou": 69.28014514794991,
+            "checkpoint_sha256": "13f99a4f873823183a150e3c1075cdcc62dd0d45280f3dc650ce0e554c661494"
+          },
+          "kd_coverage_percent": {
+            "kd_pixels": 100.0,
+            "kd_eligible_pixels": 100.0,
+            "kd_old_evidence_pixels": 6.55609283496973,
+            "kd_new_evidence_pixels": 26.018517747474732,
+            "kd_unresolved_pixels": 67.42538941755554,
+            "kd_ambiguous_conflict_pixels": 0.22057060352726499,
+            "kd_conflict_pixels": 0.6226630202785927,
+            "kd_old_conflict_pixels": 0.054816180116836234,
+            "kd_teacher_confident_pixels": 6.896175347478792
+          },
+          "kd_audit": {
+            "kd_pixels": 7891058791.0,
+            "kd_eligible_pixels": 7891058791.0,
+            "kd_old_evidence_pixels": 517345140.0,
+            "kd_new_evidence_pixels": 2053136532.0,
+            "kd_unresolved_pixels": 5320577119.0,
+            "kd_ambiguous_conflict_pixels": 17405356.0,
+            "kd_conflict_pixels": 49134705.0,
+            "kd_old_conflict_pixels": 4325577.0,
+            "kd_teacher_confident_pixels": 544181251.0,
+            "kd_kl_sum": 849792958.9643555,
+            "kd_plain_kl_sum": 849792958.9643555,
+            "batches_per_rank": 6000,
+            "world_size": 2,
+            "scope": "All active KD training batches, summed across ranks; repeated augmented pixels",
+            "kd_mode": "plain",
+            "temperature": 2.0,
+            "weight": 0.1
+          },
+          "mean_kd_over_all_valid_pixels": 0.10769061306875206,
+          "mean_kd_over_selected_pixels": 0.10769061306875206
+        },
+        "2": {
+          "single_scale": {
+            "miou": 70.77133215876269,
+            "iou": [
+              90.9463229222866,
+              84.65253393305498,
+              40.26077891464935,
+              89.80575370580917,
+              69.72818373936379,
+              80.15556909460359,
+              89.84327225833655,
+              84.70836050840865,
+              87.46598637031067,
+              37.911739572939865,
+              85.29452678535661,
+              39.298912612636414,
+              81.07141480445914,
+              79.71510176270787,
+              76.12710546551212,
+              70.95874242948554,
+              44.79031333391075,
+              84.12610951019701,
+              51.59790233860465,
+              67.83207951126403,
+              49.907265760119216
+            ],
+            "images": 1449,
+            "class_ids": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            "iteration": 8000
+          },
+          "five_scale_flip": {
+            "miou": 72.38277854192036,
+            "iou": [
+              91.53645765872811,
+              87.3502133028901,
+              42.37421771336628,
+              90.49666108495981,
+              72.69446378192211,
+              81.49679543397322,
+              91.62883033171946,
+              86.05348836256603,
+              88.93565243828854,
+              38.86009778381963,
+              88.16481739222812,
+              39.907337338111795,
+              82.30315150068712,
+              81.8150575130859,
+              78.04250927376599,
+              71.10369371167533,
+              49.20085250004135,
+              83.55488734404652,
+              51.706713112269085,
+              70.11160325815906,
+              52.70084854402409
+            ],
+            "old_including_background_miou": 75.79771528886172,
+            "new_miou": 61.45498095170802,
+            "checkpoint_sha256": "69a704c512b1c68ebc6106c2e56ba9b3dbcd74276083ea08ff3a6a49c518e24c"
+          },
+          "kd_coverage_percent": {
+            "kd_pixels": 100.0,
+            "kd_eligible_pixels": 100.0,
+            "kd_old_evidence_pixels": 9.073624882457304,
+            "kd_new_evidence_pixels": 27.13671644917774,
+            "kd_unresolved_pixels": 63.78965866836496,
+            "kd_ambiguous_conflict_pixels": 0.3023310293385538,
+            "kd_conflict_pixels": 1.66058385346292,
+            "kd_old_conflict_pixels": 0.04399449830107442,
+            "kd_teacher_confident_pixels": 9.894910820213834
+          },
+          "kd_audit": {
+            "kd_pixels": 7883265258.0,
+            "kd_eligible_pixels": 7883265258.0,
+            "kd_old_evidence_pixels": 715297918.0,
+            "kd_new_evidence_pixels": 2139259340.0,
+            "kd_unresolved_pixels": 5028708000.0,
+            "kd_ambiguous_conflict_pixels": 23833557.0,
+            "kd_conflict_pixels": 130908230.0,
+            "kd_old_conflict_pixels": 3468203.0,
+            "kd_teacher_confident_pixels": 780042067.0,
+            "kd_kl_sum": 799992427.6185303,
+            "kd_plain_kl_sum": 799992427.6185303,
+            "batches_per_rank": 6000,
+            "world_size": 2,
+            "scope": "All active KD training batches, summed across ranks; repeated augmented pixels",
+            "kd_mode": "plain",
+            "temperature": 2.0,
+            "weight": 0.1
+          },
+          "mean_kd_over_all_valid_pixels": 0.10147983119135712,
+          "mean_kd_over_selected_pixels": 0.10147983119135712
+        }
+      },
+      "final_groups": {
+        "all": 70.77133215876269,
+        "old_with_background": 74.24651905499506,
+        "old_foreground": 73.1331987971756,
+        "new": 59.65073409081913,
+        "initial_foreground": 74.98267048828332,
+        "first_added": 69.43425541496022
+      },
+      "final_errors": {
+        "old_to_new_percent": 1.1921295916340904,
+        "old_to_background_percent": 14.473463519194599,
+        "new_to_old_percent": 3.164785402648103,
+        "new_to_background_percent": 15.25742012412541
+      },
+      "old_region_retention": {
+        "scope": "Same 1449 images, restrict GT to0..15 for both models; future/new GT excluded",
+        "before_miou": 75.07004204924006,
+        "after_miou": 74.65557432188515,
+        "forgetting_pp": 0.4144677273549151,
+        "before_foreground_miou": 73.8262494047568,
+        "after_foreground_miou": 73.50856362831539,
+        "per_class_forgetting_pp": [
+          1.866196991057464,
+          2.202187413377999,
+          0.023614935859754382,
+          0.5138652472138716,
+          0.9416129295046005,
+          0.36381526443972234,
+          0.9945100851906972,
+          -1.2474562306471029,
+          0.42147684958035825,
+          2.563600653945798,
+          1.6799027847307144,
+          -0.7811190960859307,
+          0.008038326531362827,
+          0.622409124484065,
+          -2.1501348758178125,
+          -1.3910367656869198
+        ]
+      }
+    },
+    "evidence": {
+      "stages": {
+        "1": {
+          "single_scale": {
+            "miou": 75.36382553256516,
+            "iou": [
+              92.80697826410068,
+              86.28177768852598,
+              40.16698478017089,
+              90.36270618266884,
+              69.74171828966516,
+              80.9913696239451,
+              90.59293855732705,
+              83.57010169791586,
+              89.25259321067976,
+              44.44754413452605,
+              88.0815175469806,
+              38.106751523560014,
+              82.3916885311341,
+              82.4902076121368,
+              75.08470423026357,
+              71.45162664744196
+            ],
+            "images": 1240,
+            "class_ids": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "iteration": 8000
+          },
+          "five_scale_flip": {
+            "miou": 76.49103842298958,
+            "iou": [
+              93.0608395885759,
+              88.89384765601339,
+              42.6636189275111,
+              91.40386153155362,
+              71.90771444606632,
+              82.08632497635023,
+              92.15743172148466,
+              84.85871795731809,
+              90.71980241931634,
+              44.16666894839551,
+              89.72520478345909,
+              38.467922777704196,
+              83.12871870881968,
+              83.87871969251859,
+              76.2539961451898,
+              70.48322448755654
+            ],
+            "old_including_background_miou": 79.24036663236767,
+            "new_miou": 70.44251636235776,
+            "checkpoint_sha256": "a95364d20724d874788824719de994bc5c813943a43082687c15ff2bbf55e15b"
+          },
+          "kd_coverage_percent": {
+            "kd_pixels": 6.512506744799895,
+            "kd_eligible_pixels": 100.0,
+            "kd_old_evidence_pixels": 6.512506744799895,
+            "kd_new_evidence_pixels": 26.399085245390868,
+            "kd_unresolved_pixels": 67.08840800980924,
+            "kd_ambiguous_conflict_pixels": 0.20514809772375955,
+            "kd_conflict_pixels": 0.6691516233565975,
+            "kd_old_conflict_pixels": 0.04626637687915814,
+            "kd_teacher_confident_pixels": 6.896175347478792
+          },
+          "kd_audit": {
+            "kd_pixels": 513905736.0,
+            "kd_eligible_pixels": 7891058791.0,
+            "kd_old_evidence_pixels": 513905736.0,
+            "kd_new_evidence_pixels": 2083167337.0,
+            "kd_unresolved_pixels": 5293985718.0,
+            "kd_ambiguous_conflict_pixels": 16188357.0,
+            "kd_conflict_pixels": 52803148.0,
+            "kd_old_conflict_pixels": 3650907.0,
+            "kd_teacher_confident_pixels": 544181251.0,
+            "kd_kl_sum": 93041842.5566838,
+            "kd_plain_kl_sum": 2814126579.6757812,
+            "batches_per_rank": 6000,
+            "world_size": 2,
+            "scope": "All active KD training batches, summed across ranks; repeated augmented pixels",
+            "kd_mode": "evidence",
+            "temperature": 2.0,
+            "weight": 0.1
+          },
+          "mean_kd_over_all_valid_pixels": 0.011790793228254862,
+          "mean_kd_over_selected_pixels": 0.1810484609120685
+        },
+        "2": {
+          "single_scale": {
+            "miou": 70.41038899643355,
+            "iou": [
+              90.68616400335986,
+              83.4114383711428,
+              40.42264166131871,
+              89.536127424053,
+              70.4378516578956,
+              80.22414351916034,
+              89.47187143263251,
+              84.14974681492039,
+              89.07786403275144,
+              38.47194506458108,
+              84.3025157380622,
+              33.901607677319,
+              82.86389585943729,
+              80.52682569755424,
+              75.254068238273,
+              72.8567129007779,
+              42.71841964058778,
+              84.63608280971322,
+              52.0160305700325,
+              65.62132970095563,
+              48.03088611057576
+            ],
+            "images": 1449,
+            "class_ids": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            "iteration": 8000
+          },
+          "five_scale_flip": {
+            "miou": 72.18024608209073,
+            "iou": [
+              91.35122758650284,
+              85.73523437403821,
+              43.01226749778161,
+              90.28021564552759,
+              72.67862674784864,
+              80.91857991184354,
+              91.18237238643812,
+              85.60340980003453,
+              90.25169771465663,
+              38.48237390150631,
+              87.47497909172844,
+              34.59940036661696,
+              83.6362770203248,
+              83.03700321854667,
+              76.51564894605826,
+              72.34990483683553,
+              48.4643558575296,
+              86.58756244487988,
+              53.495105197963454,
+              68.66536030280072,
+              51.463564874443016
+            ],
+            "old_including_background_miou": 75.44432619039304,
+            "new_miou": 61.73518973552334,
+            "checkpoint_sha256": "16c210207a6172af33fe64599be698b5e75ec37ef531fd6a2e9e1b00f4f2b22b"
+          },
+          "kd_coverage_percent": {
+            "kd_pixels": 9.28362535127573,
+            "kd_eligible_pixels": 100.0,
+            "kd_old_evidence_pixels": 9.28362535127573,
+            "kd_new_evidence_pixels": 28.459126029322302,
+            "kd_unresolved_pixels": 62.25724861940197,
+            "kd_ambiguous_conflict_pixels": 0.3037393290261399,
+            "kd_conflict_pixels": 1.629601298391322,
+            "kd_old_conflict_pixels": 0.044915499911749895,
+            "kd_teacher_confident_pixels": 10.213683742062406
+          },
+          "kd_audit": {
+            "kd_pixels": 731852812.0,
+            "kd_eligible_pixels": 7883265258.0,
+            "kd_old_evidence_pixels": 731852812.0,
+            "kd_new_evidence_pixels": 2243508395.0,
+            "kd_unresolved_pixels": 4907904051.0,
+            "kd_ambiguous_conflict_pixels": 23944577.0,
+            "kd_conflict_pixels": 128465793.0,
+            "kd_old_conflict_pixels": 3540808.0,
+            "kd_teacher_confident_pixels": 805171782.0,
+            "kd_kl_sum": 101838992.85416389,
+            "kd_plain_kl_sum": 4318368488.522461,
+            "batches_per_rank": 6000,
+            "world_size": 2,
+            "scope": "All active KD training batches, summed across ranks; repeated augmented pixels",
+            "kd_mode": "evidence",
+            "temperature": 2.0,
+            "weight": 0.1
+          },
+          "mean_kd_over_all_valid_pixels": 0.012918377033021547,
+          "mean_kd_over_selected_pixels": 0.13915228743312377
+        }
+      },
+      "final_groups": {
+        "all": 70.41038899643353,
+        "old_with_background": 74.09971375582747,
+        "old_foreground": 72.99395040599198,
+        "new": 58.604549766372976,
+        "initial_foreground": 74.95061457165181,
+        "first_added": 69.08062207467229
+      },
+      "final_errors": {
+        "old_to_new_percent": 1.2738056413017922,
+        "old_to_background_percent": 14.39971339141953,
+        "new_to_old_percent": 2.60276893899757,
+        "new_to_background_percent": 14.3013809841505
+      },
+      "old_region_retention": {
+        "scope": "Same 1449 images, restrict GT to0..15 for both models; future/new GT excluded",
+        "before_miou": 75.34598308449057,
+        "after_miou": 74.45204306041393,
+        "forgetting_pp": 0.8939400240766489,
+        "before_foreground_miou": 74.11465660104274,
+        "after_foreground_miou": 73.3127789406369,
+        "per_class_forgetting_pp": [
+          2.2748754791390695,
+          2.87033931738317,
+          -0.43195653395608247,
+          0.8020000898169855,
+          -0.6961333682304627,
+          0.29377022336015557,
+          1.0969016610630433,
+          -0.8526255372592573,
+          -0.5023625574160917,
+          2.6985768583700747,
+          3.3842592179273794,
+          4.0846004155443865,
+          -0.8854488039713289,
+          1.9633819145825413,
+          -0.2539118377628,
+          -1.543226153364401
+        ]
+      }
+    }
+  },
+  "limitations": [
+    "Single training seed; bootstrap covers evaluation-image sampling, not training variability.",
+    "Selective KD reduces total KD mass as well as changing locations; no matched-mass control.",
+    "No same-runtime no-KD control; historical A800 results cannot isolate the net KD effect."
+  ],
+  "delta_evidence_minus_plain": {
+    "all": -0.3609431623291641,
+    "old_with_background": -0.1468052991675961,
+    "old_foreground": -0.13924839118361376,
+    "new": -1.046184324446152,
+    "initial_foreground": -0.03205591663150642,
+    "first_added": -0.3536333402879279
+  },
+  "paired_image_bootstrap": {
+    "replicates": 2000,
+    "seed": 20261013,
+    "images": 1449,
+    "delta95CI": {
+      "all": [
+        -0.7763848439139004,
+        0.06970138149393579
+      ],
+      "old_with_background": [
+        -0.5828904000796392,
+        0.3010757250397974
+      ],
+      "old_foreground": [
+        -0.6000105849608073,
+        0.33666888506226145
+      ],
+      "new": [
+        -2.0112559643038144,
+        -0.041147370431447075
+      ],
+      "initial_foreground": [
+        -0.39053650708573784,
+        0.3131521102870113
+      ],
+      "first_added": [
+        -1.4396016357700265,
+        0.636214096177119
+      ]
+    }
+  },
+  "single_scale_winner": "plain",
+  "five_scale_flip_winner": "plain"
+}

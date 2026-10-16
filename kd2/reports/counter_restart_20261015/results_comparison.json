@@ -1,0 +1,62 @@
+{
+  "variants": {
+    "plain": {
+      "1": {
+        "SS_all": 75.08644704357246,
+        "SS_old_including_background": 77.94627527949523,
+        "SS_new": 68.79482492454238,
+        "MS5flip_all": 76.2981477867844,
+        "MS5flip_old_including_background": 79.48814898625461,
+        "MS5flip_new": 69.28014514794991
+      },
+      "2": {
+        "SS_all": 70.77133215876269,
+        "SS_old_including_background": 74.24651905499506,
+        "SS_new": 59.65073409081913,
+        "MS5flip_all": 72.38277854192036,
+        "MS5flip_old_including_background": 75.79771528886172,
+        "MS5flip_new": 61.45498095170802
+      }
+    },
+    "counter_restart": {
+      "1": {
+        "SS_all": 74.93783385091429,
+        "SS_old_including_background": 77.85753866714207,
+        "SS_new": 68.51448325521312,
+        "MS5flip_all": 76.18023209794856,
+        "MS5flip_old_including_background": 79.40622258711295,
+        "MS5flip_new": 69.08305302178694
+      },
+      "2": {
+        "SS_all": 70.65270008139193,
+        "SS_old_including_background": 74.18513378401816,
+        "SS_new": 59.348912232987956,
+        "MS5flip_all": 72.24495636249507,
+        "MS5flip_old_including_background": 75.68110919506907,
+        "MS5flip_new": 61.24926729825829
+      }
+    }
+  },
+  "limitations": [
+    "Single seed; physical GPU pairs differ.",
+    "Old interrupted run excluded from final comparisons."
+  ],
+  "counter_minus_plain_pp": {
+    "1": {
+      "SS_all": -0.14861319265817485,
+      "SS_old_including_background": -0.08873661235315922,
+      "SS_new": -0.2803416693292604,
+      "MS5flip_all": -0.11791568883583636,
+      "MS5flip_old_including_background": -0.08192639914166477,
+      "MS5flip_new": -0.19709212616297123
+    },
+    "2": {
+      "SS_all": -0.11863207737076209,
+      "SS_old_including_background": -0.061385270976899164,
+      "SS_new": -0.30182185783117177,
+      "MS5flip_all": -0.13782217942528519,
+      "MS5flip_old_including_background": -0.11660609379265452,
+      "MS5flip_new": -0.20571365344973458
+    }
+  }
+}

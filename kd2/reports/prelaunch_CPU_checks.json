@@ -1,0 +1,10 @@
+{
+  "verify_kd.py": {
+    "exit_code": 0,
+    "output": "PASS: Bernoulli KL reference; teacher detached; background/new-channel/ignored gradients zero; empty gate; evidence partition; uncertain teacher exclusion.\n"
+  },
+  "verify_channel_kd.py": {
+    "exit_code": 0,
+    "output": "PASS: counter without contradiction exactly matches ordinaryKD value/gradient; teacher/BG/new/ignored gradients excluded; veto removes positive but preserves negative gradient; relations matches channel-weight budget and analytic negative gradient; empty selection finitezero; only licensed old winning positive retained.\n"
+  }
+}

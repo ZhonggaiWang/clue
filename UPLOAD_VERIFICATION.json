@@ -1,0 +1,26 @@
+{
+  "shell_syntax": {
+    "exit_code": 0,
+    "output": ""
+  },
+  "KD_reference": {
+    "exit_code": 0,
+    "output": "PASS: Bernoulli KL reference; teacher detached; background/new-channel/ignored gradients zero; empty gate; evidence partition; uncertain teacher exclusion.\n"
+  },
+  "channel_KD": {
+    "exit_code": 0,
+    "output": "PASS: counter without contradiction exactly matches ordinaryKD value/gradient; teacher/BG/new/ignored gradients excluded; veto removes positive but preserves negative gradient; relations matches channel-weight budget and analytic negative gradient; empty selection finitezero; only licensed old winning positive retained.\n"
+  },
+  "train_CLI": {
+    "exit_code": 0,
+    "output": "usage: train.py [-h] [--task {10-5,10-2,10-10,15-5,20-0}] [--step STEP]\n                --data_folder DATA_FOLDER [--seg_label_dir SEG_LABEL_DIR]\n                [--list_folder LIST_FOLDER] [--work_dir WORK_DIR]\n                [--prev_checkpoint PREV_CHECKPOINT]\n                [--pretrained_weights PRETRAINED_WEIGHTS] [--from_scratch]\n                [--eval_checkpoint EVAL_CHECKPOINT] [--max_iters MAX_ITERS]\n                [--eval_iters EVAL_ITERS] [--log_iters LOG_ITERS] [--spg SPG]\n       "
+  },
+  "evaluation_CLI": {
+    "exit_code": 0,
+    "output": "usage: eval_multiscale.py [-h] --checkpoint CHECKPOINT --data_folder\n                          DATA_FOLDER [--list_folder LIST_FOLDER]\n                          [--scales SCALES [SCALES ...]] [--flip]\n                          [--val_limit VAL_LIMIT] --output OUTPUT\n\nStandalone VOC evaluation: average resized segmentation logits over\nscales/views. Example (single GPU): python -B eval_multiscale.py --checkpoint\nruns/CF10_4gpu/10-5/step2/model_final.pth --data_folder /path/to/VOC2012\n--scales 0.5 "
+  },
+  "denseCRF_CLI": {
+    "exit_code": 0,
+    "output": "usage: eval_densecrf.py [-h] --checkpoint CHECKPOINT --data_folder DATA_FOLDER\n                        [--list_folder LIST_FOLDER]\n                        [--scales SCALES [SCALES ...]] [--flip] [--crf]\n                        [--crf_iterations CRF_ITERATIONS]\n                        [--gaussian_sxy GAUSSIAN_SXY]\n                        [--gaussian_compat GAUSSIAN_COMPAT]\n                        [--bilateral_sxy BILATERAL_SXY]\n                        [--bilateral_srgb BILATERAL_SRGB]\n           "
+  }
+}
